@@ -4,134 +4,179 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dr. Habeeb P — Formal Methods & AI Safety</title>
-  <meta name="description" content="Dr. Habeeb Puthukkolli — Postdoctoral Fellow at Kansas State University. Research in Formal Methods, AI Safety, Program Verification and Cyber-Physical Systems." />
+  <meta name="description" content="Dr. Habeeb Puthukkolli — Postdoctoral Fellow at Kansas State University. Research in Formal Methods, Program Verification, AI Safety, and Cyber-Physical Systems." />
   <meta property="og:title" content="Dr. Habeeb P — Formal Methods & AI Safety" />
   <meta property="og:description" content="Postdoctoral Fellow at Kansas State University researching Formal Verification and AI Safety for Cyber-Physical Systems." />
   <meta property="og:image" content="https://habeebp098.github.io/ROSE5436.JPG" />
-  <meta name="theme-color" content="#0f1724" />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="icon" href="ROSE5436.JPG" type="image/jpeg" />
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa6b2;--accent:#7dd3fc;--glass:rgba(255,255,255,0.03)}
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#e6eef6;background:linear-gradient(180deg,#071025 0%,#071429 60%);scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-    .container{max-width:1000px;margin:40px auto;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.6);}
-    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:16px}
-    .avatar{width:88px;height:88px;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(125,211,252,0.08)}
-    .avatar img{width:100%;height:100%;object-fit:cover;border-radius:12px;}
-    h1{margin:0;font-size:26px}
-    p.lead{margin:4px 0 0;color:var(--muted)}
-    nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-weight:500}
-    nav a:hover{color:var(--accent)}
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:26px;margin-top:24px}
-    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    h2{margin:0 0 8px;font-size:18px}
-    h3{margin:10px 0 6px;font-size:15px}
-    .muted{color:var(--muted);font-size:14px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .chip{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
-    .pubs li{margin-bottom:10px}
-    .projects{display:flex;flex-direction:column;gap:12px}
-    footer{text-align:center;color:var(--muted);font-size:13px;margin-top:22px}
-    @media (max-width:880px){.grid{grid-template-columns:1fr;}.avatar{width:72px;height:72px}.container{margin:20px}header{flex-direction:column;text-align:center}}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#022;text-decoration:none;font-weight:600}
-    .contact a{color:var(--accent);text-decoration:none;font-weight:600}
-    .toc{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center}
-    .top-btn{position:fixed;bottom:20px;right:20px;background:var(--accent);color:#012;padding:10px 12px;border-radius:10px;cursor:pointer;font-weight:700;display:none;box-shadow:0 0 8px rgba(125,211,252,0.4)}
+    :root {
+      --accent:#007aff;
+      --bg:#f5f8ff;
+      --text:#1a1a1a;
+      --muted:#555;
+      --card:#ffffff;
+      --shadow:0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:"Inter",Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    header{
+      max-width:1100px;
+      margin:40px auto 20px;
+      padding:0 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .brand{display:flex;align-items:center;gap:16px;}
+    .avatar{
+      width:100px;height:100px;border-radius:12px;overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;}
+    h1{font-size:26px;margin-bottom:4px;}
+    p.lead{color:var(--muted);font-size:15px;}
+    nav a{
+      color:var(--text);
+      text-decoration:none;
+      margin-left:18px;
+      font-weight:500;
+      transition:color .2s;
+    }
+    nav a:hover{color:var(--accent);}
+    main{max-width:1100px;margin:0 auto;padding:0 20px 60px;}
+    section{margin-bottom:40px;}
+    .card{
+      background:var(--card);
+      border-radius:14px;
+      box-shadow:var(--shadow);
+      padding:28px;
+      margin-bottom:20px;
+    }
+    h2{margin-bottom:10px;font-size:22px;border-left:4px solid var(--accent);padding-left:10px;}
+    .muted{color:var(--muted);}
+    ul{list-style-type:none;margin-top:10px;}
+    ul li{margin-bottom:10px;}
+    .pubs strong{color:#000;}
+    .btn{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      padding:10px 16px;
+      border-radius:8px;
+      font-weight:600;
+      transition:background .2s;
+    }
+    .btn:hover{background:#005fcb;}
+    footer{
+      text-align:center;
+      font-size:13px;
+      color:var(--muted);
+      padding:20px;
+      background:#f0f3fa;
+    }
+    @media (max-width:800px){
+      header{flex-direction:column;text-align:center;}
+      nav a{margin:0 10px;}
+    }
+    .top-btn{
+      position:fixed;bottom:20px;right:20px;
+      background:var(--accent);color:#fff;
+      border-radius:8px;padding:10px 14px;
+      font-weight:700;cursor:pointer;
+      display:none;box-shadow:var(--shadow);
+    }
   </style>
 </head>
 
 <body>
-  <main class="container">
-    <header>
-      <div class="brand">
-        <div class="avatar"><img src="ROSE5436.JPG" alt="Dr. Habeeb P"></div>
-        <div>
-          <h1>Dr. Habeeb P</h1>
-          <p class="lead">Postdoctoral Fellow — Formal Methods · Program Verification · AI Safety</p>
-        </div>
+  <header>
+    <div class="brand">
+      <div class="avatar"><img src="ROSE5436.JPG" alt="Dr. Habeeb P"></div>
+      <div>
+        <h1>Dr. Habeeb P</h1>
+        <p class="lead">Postdoctoral Fellow — Formal Methods · Program Verification · AI Safety</p>
       </div>
-      <nav class="toc">
-        <a href="#about">About</a>
-        <a href="#vision">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <div class="grid">
-      <section>
-        <article class="card" id="about">
-          <h2>About</h2>
-          <p class="muted">I am a Postdoctoral Fellow in the Department of Computer Science at Kansas State University. I earned my Ph.D. & M.Tech (Research) in Computer Science from the Indian Institute of Science (IISc), Bangalore. My research lies at the intersection of formal methods, program verification, and AI/cyber-physical system safety. I also have strong teaching experience in programming, algorithms, and automata theory.</p>
-        </article>
-
-        <article class="card" id="vision" style="margin-top:18px">
-          <h2>Research Vision</h2>
-          <p>My long-term research vision is to build a formal foundation for trustworthy autonomy — a world where AI-enabled systems can be deployed with mathematical guarantees of safety, reliability, and accountability.</p>
-          <p>I develop methods that unify symbolic reasoning with data-driven learning to verify and certify AI-controlled cyber-physical systems such as autonomous vehicles and smart grids. My work focuses on designing scalable verification algorithms, bridging learning and logic through abstraction, and formulating formal contracts and conformance relations for neural controllers. Ultimately, I envision a verification ecosystem that enables engineers to design AI systems by proof — embedding safety and correctness throughout their lifecycle.</p>
-        </article>
-
-        <article class="card" id="publications" style="margin-top:18px">
-          <h2>Selected Publications</h2>
-          <ul class="pubs">
-            <li><strong>Interval Image Abstraction for Verification of Camera-Based Autonomous Systems</strong>, <em>EMSOFT 2024</em></li>
-            <li><strong>Approximate Conformance Checking for Closed-Loop Systems with Neural Network Controllers</strong>, <em>EMSOFT 2024</em></li>
-            <li><strong>Approximate Conformance Verification of Deep Neural Networks</strong>, <em>NASA Formal Methods 2024</em></li>
-            <li><strong>Verification of Camera-Based Autonomous Systems</strong>, <em>IEEE TCAD 2023</em></li>
-            <li><strong>Verification of a Generative Separation Kernel</strong>, <em>ATVA 2020</em></li>
-          </ul>
-          <p><a href="/CV_HABEEB_P_Jun2025_common.pdf" style="color:var(--accent);text-decoration:none;font-weight:600">Download Full CV (PDF)</a></p>
-        </article>
-
-        <article class="card" id="projects" style="margin-top:18px">
-          <h2>Projects</h2>
-          <div class="projects">
-            <div><strong>Formal Verification of Camera-Based Autonomous Systems</strong> — Introduced interval image abstraction for geometric reasoning about safety.</div>
-            <div><strong>Formal Reasoning of Power Grid Networks with IEDs</strong> — Developed a formal framework for verifying smart-grid reliability.</div>
-            <div><strong>Conformance Checking for DNN-Controlled Systems</strong> — Proposed approximate verification of neural controllers in closed loops.</div>
-            <div><strong>Formal Verification of a Separation Kernel</strong> — Refinement-based proof of isolation for secure kernel architectures.</div>
-          </div>
-        </article>
-
-       
-      </section>
-
-      <aside>
-        <div class="card" id="contact">
-          <h2>Contact</h2>
-          <p class="muted">Email: <a class="contact" href="mailto:habeebp@outlook.com">habeebp@outlook.com</a></p>
-          <p class="muted">Phone: <a class="contact" href="tel:+919746098098">+91 9746 098 098</a></p>
-          <p class="muted">Location: Manhattan, KS · Kerala, India</p>
-          <h3 class="muted" style="margin-top:12px">Links</h3>
-          <p><a style="color:var(--accent);text-decoration:none;font-weight:600" href="https://github.com/habeebp098">GitHub</a></p>
-          <p><a style="color:var(--accent);text-decoration:none;font-weight:600" href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a></p>
-          <p><a style="color:var(--accent);text-decoration:none;font-weight:600" href="https://www.linkedin.com/in/habeeb-p-02a6a759/">LinkedIn</a></p>
-        </div>
-
-        <div class="card" style="margin-top:16px">
-          <h2>Education</h2>
-          <p class="muted">Ph.D. & M.Tech (Research), Computer Science — IISc Bangalore, 2025</p>
-          <p class="muted">M.Sc. Computer Science — University of Calicut, 2013 (Rank Holder)</p>
-          <p class="muted">B.Sc. Computer Science — University of Calicut, 2011 (Rank Holder)</p>
-        </div>
-      </aside>
     </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#vision">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <footer>
-      <div class="muted">© <span id="year"></span> Dr. Habeeb Puthukkolli — Built with a single HTML file · Hosted on GitHub Pages</div>
-    </footer>
+  <main>
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>I am a Postdoctoral Fellow in the Department of Computer Science at Kansas State University. I earned my Ph.D. & M.Tech (Research) in Computer Science from the Indian Institute of Science (IISc), Bangalore. My research lies at the intersection of formal methods, program verification, and AI/cyber-physical system safety. I have strong teaching experience in programming, algorithms, and automata theory.</p>
+    </section>
+
+    <section id="vision" class="card">
+      <h2>Research Vision</h2>
+      <p>My long-term research vision is to build a formal foundation for trustworthy autonomy — a world where AI-enabled systems can be deployed with mathematical guarantees of safety, reliability, and accountability.</p>
+      <p>I develop methods that unify symbolic reasoning with data-driven learning to verify and certify AI-controlled cyber-physical systems such as autonomous vehicles and smart grids. My work focuses on designing scalable verification algorithms, bridging learning and logic through abstraction, and formulating formal contracts and conformance relations for neural controllers. Ultimately, I envision a verification ecosystem that enables engineers to design AI systems by proof — embedding safety and correctness throughout their lifecycle.</p>
+    </section>
+
+    <section id="publications" class="card">
+      <h2>Selected Publications</h2>
+      <ul class="pubs">
+        <li><strong>Interval Image Abstraction for Verification of Camera-Based Autonomous Systems</strong>, <em>EMSOFT 2024</em></li>
+        <li><strong>Approximate Conformance Checking for Closed-Loop Systems with Neural Network Controllers</strong>, <em>EMSOFT 2024</em></li>
+        <li><strong>Approximate Conformance Verification of Deep Neural Networks</strong>, <em>NASA Formal Methods 2024</em></li>
+        <li><strong>Verification of Camera-Based Autonomous Systems</strong>, <em>IEEE TCAD 2023</em></li>
+        <li><strong>Verification of a Generative Separation Kernel</strong>, <em>ATVA 2020</em></li>
+      </ul>
+      <p style="margin-top:10px"><a class="btn" href="/CV_HABEEB_P_Jun2025_common.pdf">Download Full CV (PDF)</a></p>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Formal Verification of Camera-Based Autonomous Systems</strong> — Introduced interval image abstraction for geometric reasoning about safety.</li>
+        <li><strong>Formal Reasoning of Power Grid Networks with IEDs</strong> — Developed a formal framework for verifying smart-grid reliability.</li>
+        <li><strong>Conformance Checking for DNN-Controlled Systems</strong> — Proposed approximate verification of neural controllers in closed loops.</li>
+        <li><strong>Formal Verification of a Separation Kernel</strong> — Refinement-based proof of isolation for secure kernel architectures.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:habeebp@outlook.com">habeebp@outlook.com</a></p>
+      <p>Phone: <a href="tel:+919746098098">+91 9746 098 098</a></p>
+      <p>Location: Manhattan, KS · Kerala, India</p>
+      <h3 style="margin-top:10px">Links</h3>
+      <p><a href="https://github.com/habeebp098">GitHub</a> · 
+         <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a> · 
+         <a href="https://www.linkedin.com/in/habeeb-p-02a6a759/">LinkedIn</a></p>
+    </section>
   </main>
+
+  <footer>
+    © <span id="year"></span> Dr. Habeeb Puthukkolli — Kansas State University · All Rights Reserved
+  </footer>
 
   <div class="top-btn" id="topBtn">↑ Top</div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const btn = document.getElementById("topBtn");
-    window.onscroll = function(){if(document.body.scrollTop>300||document.documentElement.scrollTop>300){btn.style.display="block"}else{btn.style.display="none"}};
-    btn.onclick = function(){window.scrollTo({top:0,behavior:"smooth"})};
+    const btn=document.getElementById("topBtn");
+    window.onscroll=function(){if(window.scrollY>300){btn.style.display="block"}else{btn.style.display="none"}};
+    btn.onclick=function(){window.scrollTo({top:0,behavior:"smooth"})};
   </script>
 </body>
 </html>
