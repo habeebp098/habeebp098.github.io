@@ -3,146 +3,213 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Habeeb P — Researcher | Formal Methods & AI Safety</title>
-  <meta name="description" content="Habeeb Puthukkolli — Postdoctoral Fellow. Research: formal methods, program verification, AI safety, and teaching." />
+  <title>Dr. Habeeb P — Formal Methods & AI Safety</title>
+  <meta name="description" content="Dr. Habeeb Puthukkolli — Postdoctoral Fellow at Kansas State University. Research in Formal Methods, AI Safety, Program Verification, and Cyber-Physical Systems." />
+  <meta property="og:title" content="Dr. Habeeb P — Formal Methods & AI Safety" />
+  <meta property="og:description" content="Postdoctoral Fellow at Kansas State University researching Formal Verification and AI Safety for Cyber-Physical Systems." />
+  <meta property="og:image" content="https://habeebp098.github.io/avatar.png" />
+  <meta name="theme-color" content="#0f1724" />
+  <link rel="icon" href="/avatar.png" type="image/png" />
+
+  <!-- Schema.org metadata for Google Scholar -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dr. Habeeb Puthukkolli",
+    "jobTitle": "Postdoctoral Fellow",
+    "affiliation": "Kansas State University",
+    "url": "https://habeebp098.github.io",
+    "email": "mailto:habeebp@outlook.com",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=YOUR_ID",
+      "https://www.linkedin.com/in/habeebp/",
+      "https://github.com/habeebp098"
+    ]
+  }
+  </script>
+
   <style>
     :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa6b2;--accent:#7dd3fc;--glass:rgba(255,255,255,0.03)}
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#e6eef6;background:linear-gradient(180deg,#071025 0%, #071429 60%);-webkit-font-smoothing:antialiased}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#e6eef6;background:linear-gradient(180deg,#071025 0%, #071429 60%);scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
     .container{max-width:1000px;margin:40px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.6);}
     header{display:flex;align-items:center;justify-content:space-between;gap:20px}
     .brand{display:flex;align-items:center;gap:16px}
     .avatar{width:88px;height:88px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#012;box-shadow:0 6px 18px rgba(125,211,252,0.08)}
     h1{margin:0;font-size:26px}
     p.lead{margin:4px 0 0;color:var(--muted)}
-    nav a{color:var(--muted);text-decoration:none;margin-left:14px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-weight:500}
+    nav a:hover{color:var(--accent)}
     .grid{display:grid;grid-template-columns:1fr 320px;gap:26px;margin-top:24px}
     .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
     h2{margin:0 0 8px;font-size:18px}
+    h3{margin:10px 0 6px;font-size:15px}
     .muted{color:var(--muted);font-size:14px}
     .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
     .chip{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
     .pubs li{margin-bottom:10px}
     .projects{display:flex;flex-direction:column;gap:12px}
     footer{text-align:center;color:var(--muted);font-size:13px;margin-top:22px}
-    @media (max-width:880px){.grid{grid-template-columns:1fr;}.avatar{width:72px;height:72px}.container{margin:20px}}
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.avatar{width:72px;height:72px}.container{margin:20px}header{flex-direction:column;text-align:center}}
     .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#022;text-decoration:none;font-weight:600}
     .contact a{color:var(--accent);text-decoration:none;font-weight:600}
     .meta{font-size:13px;color:var(--muted)}
-    .toc{display:flex;gap:12px;align-items:center}
+    .toc{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center}
+    .top-btn{position:fixed;bottom:20px;right:20px;background:var(--accent);color:#012;padding:10px 12px;border-radius:10px;cursor:pointer;font-weight:700;display:none;box-shadow:0 0 8px rgba(125,211,252,0.4)}
+    /* Modal for publication details */
+    .modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;overflow:auto;background:rgba(0,0,0,0.8);backdrop-filter:blur(6px)}
+    .modal-content{background:var(--card);margin:10% auto;padding:20px;border-radius:12px;max-width:600px;box-shadow:0 0 10px rgba(125,211,252,0.2)}
+    .close{color:var(--accent);float:right;font-size:22px;font-weight:bold;cursor:pointer}
+    .close:hover{color:#fff}
+    pre{background:var(--glass);padding:10px;border-radius:8px;font-size:13px;overflow:auto;color:#d6e2f0}
   </style>
 </head>
+
 <body>
   <main class="container">
     <header>
       <div class="brand">
         <div class="avatar">HP</div>
         <div>
-          <h1>Habeeb P</h1>
-          <p class="lead">Postdoctoral Fellow — Formal methods · Program verification · AI safety</p>
+          <h1>Dr. Habeeb P</h1>
+          <p class="lead">Postdoctoral Fellow — Formal Methods · Program Verification · AI Safety</p>
         </div>
       </div>
       <nav class="toc">
         <a href="#about">About</a>
-        <a href="#research">Research</a>
+        <a href="#vision">Research</a>
         <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
+        <a href="#resources">Resources</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <div class="grid">
       <section>
-        <article class="card">
-          <h2 id="about">About</h2>
-          <p class="meta">I am a Postdoctoral Fellow in the Department of Computer Science at Kansas State University. I earned my Ph.D. & M.Tech (Research) in Computer Science from the Indian Institute of Science (IISc), Bangalore. My research lies at the intersection of formal methods, program verification, and AI/cyber-physical system safety. I also have strong teaching experience, with a background in undergraduate instruction in programming, algorithms, data structures, and automata theory.</p>
-
+        <article class="card" id="about">
+          <h2>About</h2>
+          <p class="meta">I am a Postdoctoral Fellow in the Department of Computer Science at Kansas State University. I earned my Ph.D. & M.Tech (Research) in Computer Science from the Indian Institute of Science (IISc), Bangalore. My research lies at the intersection of formal methods, program verification, and AI/cyber-physical system safety. I also have strong teaching experience in programming, algorithms, and automata theory.</p>
           <div style="margin-top:14px">
             <a class="btn" href="#contact">Get in touch</a>
             <a style="margin-left:10px;color:var(--muted);text-decoration:none;font-weight:600" href="#publications">Publications</a>
           </div>
+        </article>
 
-          <div style="margin-top:16px">
-            <h3 style="margin:0 0 8px">Key skills & tools</h3>
-            <div class="skills">
-              <span class="chip">Formal methods</span>
-              <span class="chip">Model checking</span>
-              <span class="chip">Theorem proving</span>
-              <span class="chip">Neural network verification</span>
-              <span class="chip">Cyber-Physical Systems</span>
-              <span class="chip">Python / C</span>
-              <span class="chip">UPPAAL / Z3</span>
-              <span class="chip">Teaching & Mentorship</span>
-            </div>
-          </div>
+        <article class="card" id="vision" style="margin-top:18px">
+          <h2>Research Vision</h2>
+          <p>I aim to develop scalable formal verification frameworks for AI-enabled cyber-physical systems. My work bridges symbolic reasoning and data-driven perception models to ensure safety and reliability of neural network–controlled systems such as autonomous vehicles and intelligent power grids.</p>
+          <p>Long-term, my goal is to unify logic-based verification, simulation analysis, and neural approximation techniques into practical certification tools for trustworthy autonomous systems.</p>
         </article>
 
         <article class="card" style="margin-top:18px">
-          <h2 id="research">Research & Teaching Experience</h2>
+          <h2>Research & Teaching Experience</h2>
           <ul style="margin-top:10px">
-            <li>Research Associate (2025–present), IISc Bangalore — Formal reasoning of power grid networks integrated with IEDs.</li>
-            <li>Visiting Research Scholar (2022), Kansas State University — Verification algorithms for cyber-physical systems with AI components.</li>
-            <li>Teaching Assistant (2018–2022), IISc Bangalore — Taught courses including Automata Theory, Mathematical Logic, Program Verification, and Formal Methods.</li>
-            <li>Assistant Professor (2013–2016), SS College, Areekode, Kerala — Undergraduate teaching in computer science.</li>
-            <li>Project Assistant (2016–2017), IISc Bangalore — Formally verified secure kernel project.</li>
+            <li>Postdoctoral Fellow (2025–present), Kansas State University — Formal verification of AI-enabled CPS.</li>
+            <li>Research Associate (2024–2025), IISc Bangalore — Formal reasoning of power-grid networks integrated with IEDs.</li>
+            <li>Visiting Research Scholar (2022), Kansas State University — Verification algorithms for hybrid systems.</li>
+            <li>Teaching Assistant (2018–2022), IISc Bangalore — Courses: Automata Theory, Mathematical Logic, Formal Methods.</li>
+            <li>Assistant Professor (2013–2016), SS College, Areekode — Undergraduate teaching in computer science.</li>
           </ul>
         </article>
 
-        <article class="card" style="margin-top:18px">
-          <h2 id="publications">Selected Publications</h2>
+        <article class="card" id="publications" style="margin-top:18px">
+          <h2>Selected Publications</h2>
           <ul class="pubs" style="margin-top:10px">
-            <li><strong>Interval Image Abstraction for Verification of Camera-Based Autonomous Systems.</strong> EMSOFT 2024.</li>
-            <li><strong>Approximate Conformance Checking for Closed-Loop Systems with Neural Network Controllers.</strong> EMSOFT 2024.</li>
-            <li><strong>Approximate Conformance Verification of Deep Neural Networks.</strong> NASA Formal Methods (NFM), 2024.</li>
-            <li><strong>Verification of Camera-Based Autonomous Systems.</strong> IEEE TCAD, vol. 42, no. 10, pp. 3450-3463, 2023.</li>
-            <li><strong>Verification of a Generative Separation Kernel.</strong> ATVA 2020.</li>
+            <li><a href="#" onclick="openModal('emsoft1')"><strong>Interval Image Abstraction for Verification of Camera-Based Autonomous Systems</strong></a>, <em>EMSOFT 2024</em></li>
+            <li><a href="#" onclick="openModal('emsoft2')"><strong>Approximate Conformance Checking for Closed-Loop Systems with Neural Network Controllers</strong></a>, <em>EMSOFT 2024</em></li>
+            <li><a href="#" onclick="openModal('nfm2024')"><strong>Approximate Conformance Verification of Deep Neural Networks</strong></a>, <em>NASA Formal Methods 2024</em></li>
+            <li><a href="#" onclick="openModal('tcad2023')"><strong>Verification of Camera-Based Autonomous Systems</strong></a>, <em>IEEE TCAD 2023</em></li>
+            <li><a href="#" onclick="openModal('atva2020')"><strong>Verification of a Generative Separation Kernel</strong></a>, <em>ATVA 2020</em></li>
           </ul>
           <p style="margin-top:12px"><a href="/CV_HABEEB_P_Jun2025_common.pdf" style="text-decoration:none;color:var(--accent);font-weight:600">Download Full CV (PDF)</a></p>
         </article>
 
-        <article class="card" style="margin-top:18px">
-          <h2 id="projects">Projects</h2>
+        <article class="card" id="projects" style="margin-top:18px">
+          <h2>Projects</h2>
           <div class="projects">
-            <div><strong>Formal Verification of Camera-Based Autonomous Systems</strong> — Developed techniques to verify safety of autonomous vehicles operating in 3D environments. Introduced interval image abstraction to efficiently represent sets of images, ensuring collision-free trajectories and enabling falsification of unsafe scenarios.</div>
-            <div><strong>Formal Reasoning of Power Grid Networks with IEDs</strong> — Created a framework for analyzing interactions between intelligent electronic devices (IEDs) and power grids. Focuses on ensuring system reliability and uncovering potential vulnerabilities in smart grid infrastructures using formal verification.</div>
-            <div><strong>Conformance Checking for Closed-Loop Systems with DNN Controllers</strong> — Proposed approximate conformance methods to compare behaviors of different neural network controllers in closed-loop settings. Provides guarantees on performance preservation across retrained networks by reducing the problem to reachability analysis.</div>
-            <div><strong>Formal Verification of a Separation Kernel</strong> — Designed a conditional parametric refinement framework for verifying generative separation kernels like Muen. Demonstrated correctness proofs for separation properties, contributing to secure and reliable kernel architectures.</div>
+            <div><strong>Formal Verification of Camera-Based Autonomous Systems</strong> — Developed the “interval image abstraction” for scalable safety verification of vision-based vehicles.</div>
+            <div><strong>Formal Reasoning of Power Grid Networks with IEDs</strong> — Framework to analyze and verify smart-grid reliability and resilience using formal methods.</div>
+            <div><strong>Conformance Checking for DNN-Controlled Systems</strong> — Approximate verification framework for behavioral equivalence across neural controllers.</div>
+            <div><strong>Formal Verification of a Separation Kernel</strong> — Proved parametric refinement for Muen kernel to ensure temporal and spatial isolation.</div>
           </div>
         </article>
 
+        <article class="card" id="resources" style="margin-top:18px">
+          <h2>Resources & Tools</h2>
+          <ul>
+            <li><a href="https://github.com/habeebp098/CamVerif">CamVerif</a> — Verification framework for camera-based autonomous vehicles.</li>
+            <li><a href="https://github.com/habeebp098/simulink-checker">Simulink Checker</a> — Extraction and formal verification of Stateflow models.</li>
+            <li><a href="https://github.com/habeebp098/octomap-tools">Octomap Tools</a> — 3D occupancy and reachability analysis utilities.</li>
+          </ul>
+        </article>
       </section>
 
       <aside>
-        <div class="card">
+        <div class="card" id="contact">
           <h2>Contact</h2>
-          <p class="muted" id="contact">Email: <a class="contact" href="mailto:habeebp@outlook.com">habeebp@outlook.com</a></p>
+          <p class="muted">Email: <a class="contact" href="mailto:habeebp@outlook.com">habeebp@outlook.com</a></p>
           <p class="muted">Phone: <a class="contact" href="tel:+919746098098">+91 9746 098 098</a></p>
-          <p class="muted">Location: Manhattan, KS & Kerala, India</p>
-
-          <div style="margin-top:12px">
-            <h3 class="muted">Links</h3>
-            <p style="margin:8px 0"><a style="text-decoration:none;color:var(--accent);font-weight:600" href="https://github.com/your-github">GitHub</a></p>
-            <p style="margin:8px 0"><a style="text-decoration:none;color:var(--accent);font-weight:600" href="https://scholar.google.com">Google Scholar</a></p>
-            <p style="margin:8px 0"><a style="text-decoration:none;color:var(--accent);font-weight:600" href="https://www.linkedin.com">LinkedIn</a></p>
-          </div>
+          <p class="muted">Location: Manhattan, KS · Kerala, India</p>
+          <h3 class="muted" style="margin-top:12px">Links</h3>
+          <p><a style="color:var(--accent);text-decoration:none;font-weight:600" href="https://github.com/habeebp098">GitHub</a></p>
+          <p><a style="color:var(--accent);text-decoration:none;font-weight:600" href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a></p>
+          <p><a style="color:var(--accent);text-decoration:none;font-weight:600" href="https://www.linkedin.com/in/habeebp/">LinkedIn</a></p>
         </div>
 
         <div class="card" style="margin-top:16px">
           <h2>Education</h2>
           <p class="muted">Ph.D. & M.Tech (Research), Computer Science — IISc Bangalore, 2025</p>
-          <p class="muted">M.Sc. Computer Science — University of Calicut, 2013 (University Rank Holder)</p>
-          <p class="muted">B.Sc. Computer Science — University of Calicut, 2011 (University Rank Holder)</p>
+          <p class="muted">M.Sc. Computer Science — University of Calicut, 2013 (Rank Holder)</p>
+          <p class="muted">B.Sc. Computer Science — University of Calicut, 2011 (Rank Holder)</p>
         </div>
       </aside>
     </div>
 
     <footer>
-      <div class="muted">© <span id="year"></span> Habeeb Puthukkolli — Built with a single HTML file · Hosted on GitHub Pages</div>
+      <div class="muted">© <span id="year"></span> Dr. Habeeb Puthukkolli — Built with a single HTML file · Hosted on GitHub Pages</div>
     </footer>
   </main>
 
+  <div class="top-btn" id="topBtn">↑ Top</div>
+
+  <!-- Modals for publications -->
+  <div id="emsoft1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('emsoft1')">&times;</span>
+  <h3>Interval Image Abstraction for Verification of Camera-Based Autonomous Systems (EMSOFT 2024)</h3>
+  <p>This paper introduces interval image abstraction, a geometric representation for reasoning about camera perception and safety verification of autonomous vehicles in 3D environments.</p>
+  <pre>@inproceedings{Habeeb2024IntervalImage,
+  title={Interval Image Abstraction for Verification of Camera-Based Autonomous Systems},
+  author={Habeeb Puthukkolli and Deepak D'Souza and Kamal Lodaya and Pavithra Prabhakar},
+  booktitle={EMSOFT},
+  year={2024}
+}</pre></div></div>
+
+  <div id="emsoft2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('emsoft2')">&times;</span>
+  <h3>Approximate Conformance Checking for Closed-Loop Systems with Neural Network Controllers (EMSOFT 2024)</h3>
+  <p>Presents an approximate conformance verification framework for comparing behaviors of retrained or quantized DNN controllers within closed-loop systems.</p></div></div>
+
+  <div id="nfm2024" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('nfm2024')">&times;</span>
+  <h3>Approximate Conformance Verification of Deep Neural Networks (NFM 2024)</h3>
+  <p>Formalizes a method to bound behavioral deviations across neural networks using metric conformance relations and reachability-based reasoning.</p></div></div>
+
+  <div id="tcad2023" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('tcad2023')">&times;</span>
+  <h3>Verification of Camera-Based Autonomous Systems (IEEE TCAD 2023)</h3>
+  <p>Develops an end-to-end verification methodology for camera-driven autonomous systems using geometric abstractions and model checking.</p></div></div>
+
+  <div id="atva2020" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('atva2020')">&times;</span>
+  <h3>Verification of a Generative Separation Kernel (ATVA 2020)</h3>
+  <p>Proposes a refinement-based approach for verifying information flow and isolation properties of separation kernels like Muen.</p></div></div>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    const btn=document.getElementById("topBtn");
+    window.onscroll=function(){if(document.body.scrollTop>300||document.documentElement.scrollTop>300){btn.style.display="block"}else{btn.style.display="none"}};
+    btn.onclick=function(){window.scrollTo({top:0,behavior:"smooth"})};
+
+    function openModal(id){document.getElementById(id).style.display="block";}
+    function closeModal(id){document.getElementById(id).style.display="none";}
+    window.onclick=function(e){document.querySelectorAll('.modal').forEach(m=>{if(e.target==m){m.style.display="none";}});}
   </script>
 </body>
 </html>
