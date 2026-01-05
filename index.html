@@ -2,197 +2,456 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Habeeb P — Formal Methods & AI Safety</title>
   <meta name="description" content="Habeeb P — Postdoctoral Fellow at Kansas State University. Research in formal methods, program verification, AI safety, and cyber-physical systems." />
-  <meta property="og:title" content="Habeeb P — Formal Methods & AI Safety" />
-  <meta property="og:description" content="Postdoctoral Fellow at Kansas State University working with Prof. Pavithra Prabhakar. Ph.D. under Dr. Deepak D’Souza, IISc Bangalore. Research in formal verification and AI safety." />
-  <meta property="og:image" content="https://habeebp098.github.io/ROSE5436.JPG" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="icon" href="ROSE5436.JPG" type="image/jpeg" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     :root {
-      --accent:#005eff;
-      --bg:#f7f9fd;
-      --text:#111;
-      --muted:#555;
-      --card:#fff;
-      --shadow:0 4px 16px rgba(0,0,0,0.08);
-    }
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{
-      font-family:"Inter",Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.65;
-      -webkit-font-smoothing:antialiased;
+      /* Professional Academic Palette */
+      --primary: #2c3e50;       /* Dark Slate */
+      --accent: #3498db;        /* Professional Blue */
+      --accent-hover: #2980b9;
+      --bg-body: #f8f9fa;
+      --bg-sidebar: #ffffff;
+      --text-main: #333333;
+      --text-muted: #666666;
+      --border: #e9ecef;
+      --shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
 
-    header{
-      max-width:1100px;
-      margin:40px auto 20px;
-      padding:0 20px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:20px;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.7;
     }
 
-    .brand{display:flex;align-items:center;gap:20px;}
-    .avatar{
-      width:110px;height:110px;border-radius:12px;overflow:hidden;
-      box-shadow:var(--shadow);
+    /* --- Layout Grid --- */
+    .container {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      min-height: 100vh;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
     }
-    .avatar img{width:100%;height:100%;object-fit:cover;}
-    h1{font-size:28px;margin-bottom:6px;}
-    p.lead{color:var(--muted);font-size:15px;}
-    nav a{
-      color:var(--text);
-      text-decoration:none;
-      margin-left:18px;
-      font-weight:500;
-      transition:color .2s;
+
+    /* --- Sidebar (Left) --- */
+    .sidebar {
+      background: var(--bg-sidebar);
+      padding: 40px 30px;
+      border-right: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
     }
-    nav a:hover{color:var(--accent);}
-    main{max-width:1100px;margin:0 auto;padding:0 20px 60px;}
-    section{margin-bottom:40px;}
-    .card{
-      background:var(--card);
-      border-radius:14px;
-      box-shadow:var(--shadow);
-      padding:32px;
-      margin-bottom:22px;
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 3px solid #fff;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
-    h2{margin-bottom:12px;font-size:22px;border-left:4px solid var(--accent);padding-left:10px;}
-    .muted{color:var(--muted);}
-    ul{list-style:none;margin-top:10px;}
-    ul li{margin-bottom:10px;}
-    .pubs strong{color:#000;}
-    .btn{
-      display:inline-block;
-      background:var(--accent);
-      color:#fff;
-      text-decoration:none;
-      padding:10px 16px;
-      border-radius:8px;
-      font-weight:600;
-      transition:background .2s;
+
+    .sidebar h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: var(--primary);
+      margin-bottom: 5px;
     }
-    .btn:hover{background:#0045cc;}
-    footer{
-      text-align:center;
-      font-size:13px;
-      color:var(--muted);
-      padding:24px;
-      background:#eef2fb;
+
+    .sidebar .role {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-weight: 500;
     }
-    @media (max-width:800px){
-      header{flex-direction:column;text-align:center;}
-      nav a{margin:0 10px;}
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
     }
-    .top-btn{
-      position:fixed;bottom:20px;right:20px;
-      background:var(--accent);color:#fff;
-      border-radius:8px;padding:10px 14px;
-      font-weight:700;cursor:pointer;
-      display:none;box-shadow:var(--shadow);
+
+    .social-links a {
+      color: var(--text-main);
+      font-size: 18px;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 10px 15px;
+      border-radius: 6px;
+      transition: all 0.2s;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      background: #f1f5f9;
+      color: var(--accent);
+      transform: translateX(5px);
+    }
+
+    .contact-info {
+      margin-top: auto;
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* --- Main Content (Right) --- */
+    main {
+      padding: 60px 50px;
+    }
+
+    section {
+      margin-bottom: 60px;
+      scroll-margin-top: 40px; /* Offset for scrolling */
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    p { margin-bottom: 20px; color: #444; }
+
+    /* --- Cards & Lists --- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .interest-tag {
+      display: inline-block;
+      background: #f0f4f8;
+      color: var(--primary);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin: 0 5px 10px 0;
+      font-weight: 500;
+    }
+
+    /* --- Publications List --- */
+    .pub-item {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 18px;
+    }
+    
+    .pub-icon {
+      color: var(--accent);
+      margin-right: 12px;
+      font-size: 14px;
+    }
+
+    .pub-content strong {
+      display: block;
+      color: var(--primary);
+      font-size: 16px;
+    }
+
+    .venue-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      background: var(--primary);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+      vertical-align: middle;
+      text-transform: uppercase;
+    }
+
+    /* --- Projects --- */
+    .project-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      border-color: var(--accent);
+    }
+
+    .project-card h3 {
+      font-size: 17px;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    /* --- Buttons --- */
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      margin-top: 10px;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: var(--accent-hover); }
+
+    /* --- Footer --- */
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* --- Mobile Responsive --- */
+    @media (max-width: 850px) {
+      .container { grid-template-columns: 1fr; }
+      
+      .sidebar {
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 30px 20px;
+      }
+
+      .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .nav-links a { padding: 5px 10px; font-size: 14px; }
+      
+      main { padding: 40px 20px; }
+      
+      .contact-info { display: none; } /* Hide heavy contact info on mobile top */
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="brand">
-      <div class="avatar"><img src="ROSE5436.JPG" alt="Habeeb P"></div>
-      <div>
-        <h1>Habeeb P</h1>
-        <p class="lead">Postdoctoral Fellow, Kansas State University<br>
-        Working with Prof. Pavithra Prabhakar<br>
-        Ph.D., Indian Institute of Science (IISc) Bangalore - Supervised by Dr. Deepak D’Souza</p>
-      </div>
+
+<div class="container">
+  
+  <aside class="sidebar">
+    <img src="ROSE5436.JPG" alt="Habeeb P" class="profile-img">
+    
+    <h1>Habeeb P</h1>
+    <p class="role">Postdoctoral Fellow<br>Kansas State University</p>
+    
+    <div class="social-links">
+      <a href="https://github.com/habeebp098" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://scholar.google.com/citations?user=YOUR_ID" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+      <a href="https://www.linkedin.com/in/habeeb-p-02a6a759/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:habeebp@outlook.com" title="Email"><i class="fas fa-envelope"></i></a>
     </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#vision">Research</a>
+
+    <nav class="nav-links">
+      <a href="#about" class="active">About</a>
+      <a href="#vision">Research Vision</a>
+      <a href="#interests">Interests</a>
       <a href="#publications">Publications</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+
+    <div class="contact-info">
+      <p>Manhattan, KS</p>
+      </div>
+  </aside>
 
   <main>
-    <section id="about" class="card">
-      <h2>About</h2>
-      <p>I am a Postdoctoral Fellow in the Department of Computer Science at Kansas State University, working with Prof. Pavithra Prabhakar. I completed my Ph.D. in Computer Science at the Indian Institute of Science (IISc), Bangalore>, under the supervision of Dr. Deepak D’Souza. My research focuses on formal methods, program verification, and the safety of AI-enabled cyber-physical systems.</p>
+    
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a <strong>Postdoctoral Fellow</strong> in the Department of Computer Science at <strong>Kansas State University</strong>, working with <a href="#" style="color:var(--accent); text-decoration:none;">Prof. Pavithra Prabhakar</a>. </p>
+      <p>Previously, I completed my Ph.D. in Computer Science at the <strong>Indian Institute of Science (IISc), Bangalore</strong>, under the supervision of Dr. Deepak D’Souza. My research lies at the intersection of <strong>Formal Methods</strong>, <strong>Program Verification</strong>, and <strong>AI Safety</strong>.</p>
       <p>I develop frameworks that combine logical reasoning and data-driven models to verify systems that integrate perception and control. I am particularly interested in connecting rigorous verification with machine learning to ensure correctness, safety, and interpretability of intelligent autonomous systems.</p>
     </section>
 
-    <section id="vision" class="card">
+    <section id="vision">
       <h2>Research Vision</h2>
-      <p>My research aims to establish a foundation for trustworthy autonomy by developing verification techniques that make AI-based systems reliable and provably safe. I focus on combining symbolic reasoning with data-driven learning to verify and certify cyber-physical systems such as autonomous vehicles and intelligent power grids.</p>
-      <p>I design scalable verification algorithms, bridge learning and logic through abstraction, and define formal contracts and conformance relations for neural controllers. The long-term goal is to build a verification ecosystem where engineers can design AI systems by proof, integrating safety and correctness throughout their lifecycle.</p>
+      <p>My research aims to establish a foundation for <strong>trustworthy autonomy</strong> by developing verification techniques that make AI-based systems reliable and provably safe. I focus on combining symbolic reasoning with data-driven learning to verify and certify cyber-physical systems such as autonomous vehicles and intelligent power grids.</p>
+      <div style="background: #f8f9fa; border-left: 4px solid var(--accent); padding: 15px; font-style: italic;">
+        "The long-term goal is to build a verification ecosystem where engineers can design AI systems by proof, integrating safety and correctness throughout their lifecycle."
+      </div>
     </section>
 
-    <section id="interests" class="card">
+    <section id="interests">
       <h2>Research Interests</h2>
-      <ul>
-        <li>Formal verification and program analysis</li>
-        <li>Safety and conformance of AI-enabled cyber-physical systems</li>
-        <li>Neural network verification </li>
-        <li>Abstraction and reachability analysis for hybrid systems</li>
-        <li>Formal reasoning for perception and control integration</li>
-      </ul>
+      <div>
+        <span class="interest-tag">Formal verification</span>
+        <span class="interest-tag">Program analysis</span>
+        <span class="interest-tag">AI Safety & Conformance</span>
+        <span class="interest-tag">Neural Network Verification</span>
+        <span class="interest-tag">Hybrid Systems</span>
+        <span class="interest-tag">Perception & Control</span>
+      </div>
     </section>
 
-    <section id="publications" class="card">
+    <section id="publications">
       <h2>Selected Publications</h2>
-      <ul class="pubs">
-        <li><strong>Interval Image Abstraction for Verification of Camera-Based Autonomous Systems</strong>, <em>EMSOFT 2024</em></li>
-        <li><strong>Approximate Conformance Checking for Closed-Loop Systems with Neural Network Controllers</strong>, <em>EMSOFT 2024</em></li>
-        <li><strong>Approximate Conformance Verification of Deep Neural Networks</strong>, <em>NASA Formal Methods 2024</em></li>
-        <li><strong>Verification of Camera-Based Autonomous Systems</strong>, <em>IEEE TCAD 2023</em></li>
-        <li><Strong>Verification of Feedforward Neural Networks: A Survey </Strong>, <em><a href="https://drive.google.com/drive/folders/1JId5mkLkAtaVvxEE3y6I-8Xs4pui-hyD"> 2020 Link </a></em></li>
-        <li><strong>Verification of a Generative Separation Kernel</strong>, <em>ATVA 2020</em></li>
-      </ul>
-      <!-- <p style="margin-top:10px"><a class="btn" href="/CV_HABEEB_P_Jun2025_common.pdf">Download CV (PDF)</a></p> -->
+      
+      <div class="pub-item">
+        <i class="fas fa-file-alt pub-icon"></i>
+        <div class="pub-content">
+          <strong>Interval Image Abstraction for Verification of Camera-Based Autonomous Systems <span class="venue-tag">EMSOFT 2024</span></strong>
+          <span style="color:var(--text-muted)">Habeeb P, Pavithra Prabhakar</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <i class="fas fa-file-alt pub-icon"></i>
+        <div class="pub-content">
+          <strong>Approximate Conformance Checking for Closed-Loop Systems with Neural Network Controllers <span class="venue-tag">EMSOFT 2024</span></strong>
+          <span style="color:var(--text-muted)">Habeeb P, Pavithra Prabhakar</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <i class="fas fa-file-alt pub-icon"></i>
+        <div class="pub-content">
+          <strong>Approximate Conformance Verification of Deep Neural Networks <span class="venue-tag">NFM 2024</span></strong>
+          <span style="color:var(--text-muted)">NASA Formal Methods Symposium</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <i class="fas fa-file-alt pub-icon"></i>
+        <div class="pub-content">
+          <strong>Verification of Camera-Based Autonomous Systems <span class="venue-tag">IEEE TCAD 2023</span></strong>
+          <span style="color:var(--text-muted)">Journal on Computer-Aided Design</span>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <i class="fas fa-file-alt pub-icon"></i>
+        <div class="pub-content">
+          <strong>Verification of Feedforward Neural Networks: A Survey <span class="venue-tag">2020</span></strong>
+          <a href="https://drive.google.com/drive/folders/1JId5mkLkAtaVvxEE3y6I-8Xs4pui-hyD" style="color:var(--accent); font-size:14px;">View Document</a>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <i class="fas fa-file-alt pub-icon"></i>
+        <div class="pub-content">
+          <strong>Verification of a Generative Separation Kernel <span class="venue-tag">ATVA 2020</span></strong>
+          <span style="color:var(--text-muted)">Automated Technology for Verification and Analysis</span>
+        </div>
+      </div>
+      
     </section>
 
-    <section id="projects" class="card">
+    <section id="projects">
       <h2>Projects</h2>
-      <ul>
-        <li><strong>Formal Verification of Camera-Based Autonomous Systems</strong> – Developed interval image abstraction for scalable reasoning about visual safety.</li>
-        <li><strong>Formal Reasoning of Power-Grid Networks with IEDs</strong> – Built frameworks for verifying reliability and resilience in smart-grid protection systems.</li>
-        <li><strong>Conformance Checking for DNN-Controlled Systems</strong> – Proposed approximate verification methods for behavioral equivalence across neural controllers.</li>
-        <li><strong>Formal Verification of a Separation Kernel</strong> – Established refinement-based proofs for isolation in secure kernel architectures.</li>
-      </ul>
+      <div class="card-grid">
+        <div class="project-card">
+          <h3>Camera-Based Autonomous Systems</h3>
+          <p style="font-size:14px; margin-bottom:0;">Developed interval image abstraction for scalable reasoning about visual safety in autonomous driving contexts.</p>
+        </div>
+        <div class="project-card">
+          <h3>Power-Grid Networks with IEDs</h3>
+          <p style="font-size:14px; margin-bottom:0;">Built frameworks for verifying reliability and resilience in smart-grid protection systems.</p>
+        </div>
+        <div class="project-card">
+          <h3>Conformance Checking for DNN</h3>
+          <p style="font-size:14px; margin-bottom:0;">Proposed approximate verification methods for behavioral equivalence across neural controllers.</p>
+        </div>
+        <div class="project-card">
+          <h3>Separation Kernel Verification</h3>
+          <p style="font-size:14px; margin-bottom:0;">Established refinement-based proofs for isolation in secure kernel architectures.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="card">
+    <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:habeebp@outlook.com">habeebp@outlook.com</a></p>
-      <p>Phone: <a href="tel:+919746098098">+91 9746 098 098</a></p>
-      <p>Location: Manhattan, KS · Kerala, India</p>
-      <h3 style="margin-top:10px">Links</h3>
+      <p>I am always open to discussing research collaborations and new opportunities.</p>
       <p>
-        <a href="https://github.com/habeebp098">GitHub</a> · 
-        <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a> · 
-        <a href="https://www.linkedin.com/in/habeeb-p-02a6a759/">LinkedIn</a>
+        <i class="fas fa-envelope" style="width:20px; color:var(--accent)"></i> <a href="mailto:habeebp@outlook.com" style="color:var(--text-main); text-decoration:none;">habeebp@outlook.com</a><br>
+        <i class="fas fa-phone" style="width:20px; color:var(--accent)"></i> +91 9746 098 098
       </p>
     </section>
+
+    <footer>
+      &copy; <span id="year"></span> Habeeb P. Built with modern web standards.
+    </footer>
   </main>
+</div>
 
-  <footer>
-    © <span id="year"></span> Habeeb P
-  </footer>
+<script>
+  // Dynamic Year
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-  <div class="top-btn" id="topBtn">↑ Top</div>
+  // Highlight Sidebar Link on Scroll (ScrollSpy)
+  const sections = document.querySelectorAll('section');
+  const navLi = document.querySelectorAll('.nav-links a');
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const btn=document.getElementById("topBtn");
-    window.onscroll=function(){btn.style.display=window.scrollY>300?"block":"none";}
-    btn.onclick=function(){window.scrollTo({top:0,behavior:"smooth"});}
-  </script>
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLi.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href').includes(current)) {
+        a.classList.add('active');
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
